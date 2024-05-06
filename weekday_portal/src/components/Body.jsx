@@ -1,6 +1,5 @@
 import Cards from "./Cards";
 import { useState, useEffect } from "react";
-import SearchBar from "./SearchBar";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
@@ -67,7 +66,7 @@ const Body = () => {
                   (item) => item.jobRole === event.target.value
                 );
                
-                setFilterData(filterValue);
+                setFilterData(filterValue );
               }}
             >
               {listOfJobData.map((option) => (
