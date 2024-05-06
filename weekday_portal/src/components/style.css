@@ -8,6 +8,11 @@
     display: flex;
 }
 .body-container{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+}
+.cards-body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

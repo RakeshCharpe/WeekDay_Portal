@@ -2,32 +2,87 @@ import * as React from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
+import Box from '@mui/material/Box';
+import MenuItem from '@mui/material/MenuItem';
 
-const MenuCard = (props) => {
-  const {placeholder} = props;
+
+const currencies = [
+  {
+    value: "USD",
+    label: "$",
+  },
+  {
+    value: "EUR",
+    label: "€",
+  },
+  {
+    value: "BTC",
+    label: "฿",
+  },
+  {
+    value: "JPY",
+    label: "¥",
+  },
+];
+
+const SearchBar = (props) => {
+  const { res } = props;
+  
   return (
-      <Stack spacing={2} direction={"row"}>
-          <Autocomplete
-              sx={{minWidth:300}}
-        multiple
-        id="tags-standard"
-        disablePortal
-        options={top100Films}
-        getOptionLabel={(option) => option.title}
-        defaultValue={[]}
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            variant="standard"
-            label=""
-            placeholder={placeholder}
-          />
-        )}
-      />
-    </Stack>
+
+    <div className="search-bar">
+      <Box
+        component="form"
+        sx={{
+          "& .MuiTextField-root": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+      ></Box>
+      <div>
+        <TextField
+          id="outlined-select-currency"
+          select
+          label="Role"
+          defaultValue="Select"
+          helperText="select roles"
+          onChange={(e) => {
+            console.log(e.target.value);
+          }}
+        >
+          {res.map((option) => (
+            <MenuItem key={option.id} value={option.role}>
+              {option.role}
+            </MenuItem>
+          ))}
+        </TextField>
+      </div>
+    </div>
   );
 }
 
+const searchData = [
+  {
+    id: 1,
+    experience: 2,
+    role: "frontend",
+  },
+  {
+    id: 2,
+    experience: 5,
+    role: "backend",
+  },
+  {
+    id: 3,
+    experience: 3,
+    role: "FullStack",
+  },
+  {
+    id: 4,
+    experience: 1,
+    role: "ios",
+  },
+];
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
   { title: "The Shawshank Redemption", year: 1994 },
@@ -157,4 +212,4 @@ const top100Films = [
   { title: "Monty Python and the Holy Grail", year: 1975 },
 ];
 
-export default MenuCard;
+export default SearchBar;
