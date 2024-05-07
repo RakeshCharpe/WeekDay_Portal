@@ -158,6 +158,7 @@
   background-color: aqua;
   color: black;
   margin-top: 2px;
+  margin-bottom: 2px;
 }
 .apply-btn Button:hover {
   background-color: aqua;
