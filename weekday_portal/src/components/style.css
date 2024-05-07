@@ -1,170 +1,174 @@
-
-.title{
-    display: flex;
-    justify-content: center;
-    font-family: "Lexend";
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: "Lexend";
 }
-.filter-container{
-    display: flex;
+.filter-container {
+  display: flex;
 }
-.body-container{
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
+.searchFilter-container {
+  text-align: center;
 }
-.cards-body{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.searchFilter-container .textfield {
+  margin: 5px;
 }
-.card-container{
-    display: flex;
-    flex-wrap: wrap;
+.cards-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.cards{
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards {
   margin: 10px;
   height: 450px;
   width: 300px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-  border: 1.5px solid rgb(196, 242, 243)whitesmoke;
+  border: 1.5px solid rgb(196, 242, 243) whitesmoke;
   box-shadow: 5px 5px 5px whitesmoke;
   padding: 5px;
   transition: transform 0.5s;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
-.cards:hover{
-    transform: scale(1.05);
-    
-    padding: 5px;
+.cards:hover {
+  transform: scale(1.05);
+
+  padding: 5px;
 }
-.company{
-    display: flex;
+.company {
+  display: flex;
 }
 /* .posted,.company-info{
     margin-left: 1rem;
     padding: 1px;
 } */
-.posted{
-    padding: 5px 15px;
-    border: 2px solid rgb(252, 246, 246);
-    width: fit-content;
-    border-radius: 50px;
-    font-size: small;
-    font-family: "Lexend";
-    margin-bottom: 2px;
-    box-shadow: 5px 5px 5px whitesmoke;
+.posted {
+  padding: 5px 15px;
+  border: 2px solid rgb(252, 246, 246);
+  width: fit-content;
+  border-radius: 50px;
+  font-size: small;
+  font-family: "Lexend";
+  margin-bottom: 2px;
+  box-shadow: 5px 5px 5px whitesmoke;
 }
-.logo{
-    height: 2rem;
-    padding-top: 6px;
-    padding-left: 15px;
-    width: 2rem;
+.logo {
+  height: 2rem;
+  padding-top: 6px;
+  padding-left: 15px;
+  width: 2rem;
 }
-.company-name{
-    letter-spacing: 1px;
-    font-size: 13px;
-    font-family: 'Roboto';
-    font-weight: bold;
-    color: grey;
+.company-name {
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: grey;
 }
-.company-info{
-    line-height: 18px;
-    padding: 1px;
-    margin-bottom: 2px;
-    padding-left: 10px;
+.company-info {
+  line-height: 18px;
+  padding: 1px;
+  margin-bottom: 2px;
+  padding-left: 10px;
 }
-.company-link{
-    text-decoration: none;
+.company-link {
+  text-decoration: none;
 }
-.position{
-    font-size: 14px;
-    font-family: 'Roboto';
+.position {
+  font-size: 14px;
+  font-family: "Roboto";
 }
-.location{
-    font-size: 11px;
+.location {
+  font-size: 11px;
 }
-.salary{
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "Roboto";
-    display: flex;
-    align-items: center;
+.salary {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto";
+  display: flex;
+  align-items: center;
 }
-.about{
-    display: flex;
-    font-size:13px;
-    flex-direction: column;
-    align-items:center;
-    height:190px;
-    font-family:'Lexend';
-    font-weight: 300;
-    padding: 10px 15px 10px 15px;
-    position: relative;
-    /* z-index: 1; */
-    overflow-y: hidden;
-     background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
-    
+.about {
+  display: flex;
+  font-size: 13px;
+  flex-direction: column;
+  align-items: center;
+  height: 190px;
+  font-family: "Lexend";
+  font-weight: 300;
+  padding: 10px 15px 10px 15px;
+  position: relative;
+  /* z-index: 1; */
+  overflow-y: hidden;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 90%
+  );
 }
-.about:after{
-content: "";
+.about:after {
+  content: "";
   position: absolute;
   z-index: 1;
   bottom: 0;
   left: 0;
   pointer-events: none;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 90%
+  );
   width: 100%;
   height: 4em;
 }
-.about span{
-    align-self: flex-start;
-    font-weight: 500;
-    padding-bottom: 5px;
+.about span {
+  align-self: flex-start;
+  font-weight: 500;
+  padding-bottom: 5px;
 }
-.show-more{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.show-more {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.experience{
-    /* display: flex;
+.experience {
+  /* display: flex;
     justify-content: center; */
-    font-size: 14px;
-    color: grey;
-    font-family: "Lexend", sans-serif;
-    font-weight: bold;
-    padding-left: 15px;
-    letter-spacing: .5px;
-    /* align-self: flex-start; */
-    display: block;
-   
+  font-size: 14px;
+  color: grey;
+  font-family: "Lexend", sans-serif;
+  font-weight: bold;
+  padding-left: 15px;
+  letter-spacing: 0.5px;
+  /* align-self: flex-start; */
+  display: block;
 }
-.experience p{
-    display: block;
-    font-family: "Lexend",sans-serif;
-    letter-spacing: 1px;
-    font-weight: 300;
-    margin-top: 2px;
+.experience p {
+  display: block;
+  font-family: "Lexend", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-top: 2px;
 }
-.apply-btn{
-    display: flex;
+.apply-btn {
+  display: flex;
   /* justify-content: flex-end; */
   justify-content: center;
   align-items: center;
-  
- 
 }
-.apply-btn Button{
-    background-color: aqua;
-    color: black;
-    margin-top: 2px;
+.apply-btn Button {
+  background-color: aqua;
+  color: black;
+  margin-top: 2px;
 }
-.apply-btn Button:hover{
-    background-color: aqua;
-    color: black;
-    /* margin-top: 1rem; */
+.apply-btn Button:hover {
+  background-color: aqua;
+  color: black;
+  /* margin-top: 1rem; */
 }
