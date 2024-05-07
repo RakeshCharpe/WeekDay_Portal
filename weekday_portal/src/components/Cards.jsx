@@ -5,6 +5,8 @@ import WarningIcon from "@mui/icons-material/Warning";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
 const Cards = (props) => {
+  
+  // ***** Getting Data from the parent components to render the data in cards dynamically
   const { res } = props;
 
   return (

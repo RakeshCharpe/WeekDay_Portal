@@ -6,7 +6,6 @@ import MenuItem from "@mui/material/MenuItem";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const Body = () => {
-
   const [listOfJobData, setFetchJobData] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -16,24 +15,24 @@ const Body = () => {
     { location: "Hybrid" },
   ];
   const roles = [
-    {jobRole:"frontend"},
-    {jobRole:"ios"},
-    {jobRole:"backend"},
-    {jobRole:"tech lead"},
-    {jobRole:"android"},
-  ]
+    { jobRole: "frontend" },
+    { jobRole: "ios" },
+    { jobRole: "backend" },
+    { jobRole: "tech lead" },
+    { jobRole: "android" },
+  ];
   const experience = [
-    {minExp:1},
-    {minExp:2},
-    {minExp:3},
-    {minExp:4},
-    {minExp:5},
-    {minExp:6},
-    {minExp:7},
-    {minExp:8},
-  ]
+    { minExp: 1 },
+    { minExp: 2 },
+    { minExp: 3 },
+    { minExp: 4 },
+    { minExp: 5 },
+    { minExp: 6 },
+    { minExp: 7 },
+    { minExp: 8 },
+  ];
 
-  // ****** fetch the data from API 
+  // ****** fetch the data from API
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   const body = JSON.stringify({
@@ -50,13 +49,6 @@ const Body = () => {
     FetchJobData();
   }, []);
 
-  // **** function to add feature of search in header
-  function searching() {
-    const filterValue = listOfJobData.filter(
-      (item) => item.companyName === searchText
-    );
-    setFilterData(filterValue);
-  }
   const FetchJobData = () => {
     fetch(
       "https://api.weekday.technology/adhoc/getSampleJdJSON",
@@ -71,7 +63,15 @@ const Body = () => {
       })
       .catch((error) => console.error(error));
   };
-  console.log(listOfJobData);
+
+  // **** function to add feature of search in header
+  function searching() {
+    const filterValue = listOfJobData.filter(
+      (item) => item.companyName === searchText
+    );
+    setFilterData(filterValue);
+  }
+
   return (
     <div className="body-container">
       <div className="search-bar">
@@ -168,7 +168,6 @@ const Body = () => {
             ))}
           </TextField>
           <TextField
-            //select
             id="outlined-select-company"
             className="textfield"
             label="Company Name"
@@ -180,11 +179,9 @@ const Body = () => {
             }}
             onKeyDown={searching}
             onMouseUpCapture={searching}
-          >
-          </TextField>
+          ></TextField>
         </div>
       </div>
-
       <InfiniteScroll dataLength={1000}>
         <div className="cards-body">
           {filterData.map((list) => (
